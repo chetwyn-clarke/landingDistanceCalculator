@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		73F526DA1E6DC12900DFAD4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F526D91E6DC12900DFAD4C /* AppDelegate.swift */; };
-		73F526DC1E6DC12900DFAD4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F526DB1E6DC12900DFAD4C /* ViewController.swift */; };
 		73F526DF1E6DC12900DFAD4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F526DD1E6DC12900DFAD4C /* Main.storyboard */; };
 		73F526E21E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73F526E01E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld */; };
 		73F526E41E6DC12900DFAD4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F526E31E6DC12900DFAD4C /* Assets.xcassets */; };
 		73F526E71E6DC12900DFAD4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F526E51E6DC12900DFAD4C /* LaunchScreen.storyboard */; };
+		73F526EF1E6DCF0000DFAD4C /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F526EE1E6DCF0000DFAD4C /* ResultsVC.swift */; };
+		73F526F11E6DCFAE00DFAD4C /* DataEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F526F01E6DCFAE00DFAD4C /* DataEntryVC.swift */; };
+		73F526F31E6DD01B00DFAD4C /* InitialDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F526F21E6DD01B00DFAD4C /* InitialDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73F526D61E6DC12900DFAD4C /* Landing Distance Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Landing Distance Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F526D91E6DC12900DFAD4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73F526DB1E6DC12900DFAD4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73F526DE1E6DC12900DFAD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73F526E11E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Landing_Distance_Calculator.xcdatamodel; sourceTree = "<group>"; };
 		73F526E31E6DC12900DFAD4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73F526E61E6DC12900DFAD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73F526E81E6DC12900DFAD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73F526EE1E6DCF0000DFAD4C /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		73F526F01E6DCFAE00DFAD4C /* DataEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryVC.swift; sourceTree = "<group>"; };
+		73F526F21E6DD01B00DFAD4C /* InitialDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				73F526D91E6DC12900DFAD4C /* AppDelegate.swift */,
-				73F526DB1E6DC12900DFAD4C /* ViewController.swift */,
 				73F526DD1E6DC12900DFAD4C /* Main.storyboard */,
 				73F526E31E6DC12900DFAD4C /* Assets.xcassets */,
 				73F526E51E6DC12900DFAD4C /* LaunchScreen.storyboard */,
 				73F526E81E6DC12900DFAD4C /* Info.plist */,
 				73F526E01E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld */,
+				73F526EE1E6DCF0000DFAD4C /* ResultsVC.swift */,
+				73F526F01E6DCFAE00DFAD4C /* DataEntryVC.swift */,
+				73F526F21E6DD01B00DFAD4C /* InitialDetailVC.swift */,
 			);
 			path = "Landing Distance Calculator";
 			sourceTree = "<group>";
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73F526DC1E6DC12900DFAD4C /* ViewController.swift in Sources */,
 				73F526DA1E6DC12900DFAD4C /* AppDelegate.swift in Sources */,
+				73F526F11E6DCFAE00DFAD4C /* DataEntryVC.swift in Sources */,
+				73F526EF1E6DCF0000DFAD4C /* ResultsVC.swift in Sources */,
 				73F526E21E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld in Sources */,
+				73F526F31E6DD01B00DFAD4C /* InitialDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +314,7 @@
 				73F526ED1E6DC12900DFAD4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
