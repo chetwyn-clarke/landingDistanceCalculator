@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73DC61801E6F078A003A27CF /* ConfigurationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DC617F1E6F078A003A27CF /* ConfigurationListVC.swift */; };
+		73DC61821E6F07D4003A27CF /* AircraftListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DC61811E6F07D4003A27CF /* AircraftListVC.swift */; };
 		73F526DA1E6DC12900DFAD4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F526D91E6DC12900DFAD4C /* AppDelegate.swift */; };
 		73F526DF1E6DC12900DFAD4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F526DD1E6DC12900DFAD4C /* Main.storyboard */; };
 		73F526E21E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73F526E01E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73DC617F1E6F078A003A27CF /* ConfigurationListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationListVC.swift; sourceTree = "<group>"; };
+		73DC61811E6F07D4003A27CF /* AircraftListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftListVC.swift; sourceTree = "<group>"; };
 		73F526D61E6DC12900DFAD4C /* Landing Distance Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Landing Distance Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F526D91E6DC12900DFAD4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F526DE1E6DC12900DFAD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,9 +70,11 @@
 				73F526E51E6DC12900DFAD4C /* LaunchScreen.storyboard */,
 				73F526E81E6DC12900DFAD4C /* Info.plist */,
 				73F526E01E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld */,
+				73F526F21E6DD01B00DFAD4C /* InitialDetailVC.swift */,
 				73F526EE1E6DCF0000DFAD4C /* ResultsVC.swift */,
 				73F526F01E6DCFAE00DFAD4C /* DataEntryVC.swift */,
-				73F526F21E6DD01B00DFAD4C /* InitialDetailVC.swift */,
+				73DC61811E6F07D4003A27CF /* AircraftListVC.swift */,
+				73DC617F1E6F078A003A27CF /* ConfigurationListVC.swift */,
 			);
 			path = "Landing Distance Calculator";
 			sourceTree = "<group>";
@@ -146,11 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DC61821E6F07D4003A27CF /* AircraftListVC.swift in Sources */,
 				73F526DA1E6DC12900DFAD4C /* AppDelegate.swift in Sources */,
 				73F526F11E6DCFAE00DFAD4C /* DataEntryVC.swift in Sources */,
 				73F526EF1E6DCF0000DFAD4C /* ResultsVC.swift in Sources */,
 				73F526E21E6DC12900DFAD4C /* Landing_Distance_Calculator.xcdatamodeld in Sources */,
 				73F526F31E6DD01B00DFAD4C /* InitialDetailVC.swift in Sources */,
+				73DC61801E6F078A003A27CF /* ConfigurationListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

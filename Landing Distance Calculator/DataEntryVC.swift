@@ -9,6 +9,8 @@
 import UIKit
 
 class DataEntryVC: UIViewController {
+    
+    var itemToSend = "itemToSend"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,9 @@ class DataEntryVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func calculateBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "resultsVC", sender: itemToSend)
+    }
 
     /*
     // MARK: - Navigation

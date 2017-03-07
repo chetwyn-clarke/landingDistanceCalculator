@@ -9,6 +9,8 @@
 import UIKit
 
 class InitialDetailVC: UIViewController {
+    
+    var itemToSend = "itemToSend"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,9 @@ class InitialDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "dataEntryVC", sender: itemToSend)
+    }
 
     /*
     // MARK: - Navigation
