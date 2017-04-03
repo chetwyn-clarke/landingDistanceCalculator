@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class AircraftListVC: UITableViewController {
+    
+    var aircraft = [Aircraft]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        generateTestAircraft()
+        getAircraft()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,32 +25,69 @@ class AircraftListVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return aircraft.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AircraftCell", for: indexPath) as! AircraftLIstCell
+        cell.configureCell(aircraft: aircraft[indexPath.row])
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 70
+    }
+    
+    func getAircraft() {
+        
+        let fetchRequest: NSFetchRequest<Aircraft> = Aircraft.fetchRequest()
+        let typeSort = NSSortDescriptor(key: "type", ascending: true)
+        let engineSort = NSSortDescriptor(key: "engine", ascending: true)
+        fetchRequest.sortDescriptors = [typeSort, engineSort]
+        
+        do {
+            self.aircraft = try context.fetch(fetchRequest)
+            self.tableView.reloadData()
+            
+        } catch {
+            
+            let error = error as NSError
+            print("\(error)")
+        }
+    }
+    
+    func generateTestAircraft() {
+        
+        let aircraft1 = Aircraft(context: context)
+        aircraft1.type = "737-700W"
+        aircraft1.engine = "CFM56-7B22 (22K)"
+        
+        let aircraft2 = Aircraft(context: context)
+        aircraft2.type = "737-700W"
+        aircraft2.engine = "CFM56-7B24 (24K)"
+        
+        let aircraft3 = Aircraft(context: context)
+        aircraft3.type = "737-800W"
+        aircraft3.engine = "CFM56-7B26 (26K)"
+        
+        let aircraft4 = Aircraft(context: context)
+        aircraft4.type = "737-800W SFP"
+        aircraft4.engine = "CFM56-7B26 (26K)"
+        
+        //ad.saveContext()
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

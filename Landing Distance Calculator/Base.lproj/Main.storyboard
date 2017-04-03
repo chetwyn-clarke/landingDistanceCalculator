@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="feb-Wg-RRZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="feb-Wg-RRZ">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="splitview2_3"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="69.164265129682988" y="87.5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Select Aircraft-->
         <scene sceneID="bJU-0M-R36">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="j1f-wK-LXe" customClass="AircraftListVC" customModule="Landing_Distance_Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,22 +76,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="5CP-R5-2Bz" style="IBUITableViewCellStyleDefault" id="e6c-xn-ef8">
-                                <rect key="frame" x="0.0" y="28" width="694" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AircraftCell" rowHeight="70" id="e6c-xn-ef8" customClass="AircraftLIstCell" customModule="Landing_Distance_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="694" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e6c-xn-ef8" id="wt2-6C-QFy">
-                                    <rect key="frame" x="0.0" y="0.0" width="694" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="694" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="AIRCRAFT TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5CP-R5-2Bz">
-                                            <rect key="frame" x="15" y="0.0" width="664" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-ti-KRD">
+                                            <rect key="frame" x="16" y="7.5" width="200" height="55"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aircraft Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLa-5C-XUe" userLabel="Aircraft Lbl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="175" id="ILs-q3-4Z0"/>
+                                                        <constraint firstAttribute="height" constant="25" id="gWX-Yj-Dwa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engine Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9a-Xh-WBo">
+                                                    <rect key="frame" x="0.0" y="30" width="200" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="8Pr-Xi-Cdw"/>
+                                                        <constraint firstAttribute="height" constant="25" id="b3e-hI-844"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hFp-ti-KRD" firstAttribute="leading" secondItem="wt2-6C-QFy" secondAttribute="leadingMargin" constant="8" id="Rlz-nU-Dax"/>
+                                        <constraint firstItem="hFp-ti-KRD" firstAttribute="centerY" secondItem="wt2-6C-QFy" secondAttribute="centerY" id="cPV-SG-6KG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="aircraftLbl" destination="cLa-5C-XUe" id="fm3-0z-AJX"/>
+                                    <outlet property="engineLbl" destination="c9a-Xh-WBo" id="0wf-6F-T9D"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -99,14 +125,14 @@
                             <outlet property="delegate" destination="j1f-wK-LXe" id="KW9-xl-hbl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="TGj-5g-Xnf"/>
+                    <navigationItem key="navigationItem" title="Select Aircraft" id="TGj-5g-Xnf"/>
                     <connections>
                         <segue destination="qmb-aS-E36" kind="show" identifier="configurationListVC" id="dxr-en-lxn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJK-aX-K4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-560"/>
+            <point key="canvasLocation" x="799.71181556195961" y="-560.15625"/>
         </scene>
         <!--Configuration ListVC-->
         <scene sceneID="8Cz-0J-o8M">
@@ -121,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="28" width="694" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w88-kY-5l6" id="IM7-px-KnV">
-                                    <rect key="frame" x="0.0" y="0.0" width="694" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="694" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CONFIGURATION NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zxZ-1F-EqR">
@@ -132,7 +158,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Flap Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z8p-3E-6Kc">
-                                            <rect key="frame" x="15" y="24" width="81" height="21"/>
+                                            <rect key="frame" x="15" y="24" width="81" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                             <nil key="textColor"/>
