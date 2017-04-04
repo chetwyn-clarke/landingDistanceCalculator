@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AircraftCell" rowHeight="70" id="e6c-xn-ef8" customClass="AircraftLIstCell" customModule="Landing_Distance_Calculator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AircraftCell" rowHeight="70" id="e6c-xn-ef8" customClass="AircraftListCell" customModule="Landing_Distance_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="694" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e6c-xn-ef8" id="wt2-6C-QFy">
@@ -127,7 +127,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Select Aircraft" id="TGj-5g-Xnf"/>
                     <connections>
-                        <segue destination="qmb-aS-E36" kind="show" identifier="configurationListVC" id="dxr-en-lxn"/>
+                        <segue destination="qmb-aS-E36" kind="show" identifier="toConfigurationListVC" id="dxr-en-lxn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJK-aX-K4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,29 +143,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="zxZ-1F-EqR" detailTextLabel="z8p-3E-6Kc" style="IBUITableViewCellStyleSubtitle" id="w88-kY-5l6">
-                                <rect key="frame" x="0.0" y="28" width="694" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConfigurationCell" rowHeight="70" id="w88-kY-5l6" customClass="ConfigurationListCell" customModule="Landing_Distance_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="694" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w88-kY-5l6" id="IM7-px-KnV">
-                                    <rect key="frame" x="0.0" y="0.0" width="694" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="694" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CONFIGURATION NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zxZ-1F-EqR">
-                                            <rect key="frame" x="15" y="-1" width="207" height="25"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Flap Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z8p-3E-6Kc">
-                                            <rect key="frame" x="15" y="24" width="81" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rv6-5F-dtD">
+                                            <rect key="frame" x="16" y="7.5" width="200" height="55"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuration Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pie-Us-efG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="Llw-mI-gXH"/>
+                                                        <constraint firstAttribute="width" constant="200" id="fuc-nW-4ez"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flap Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aN-dG-1fX">
+                                                    <rect key="frame" x="0.0" y="30" width="200" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="zm7-oU-ATy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Rv6-5F-dtD" firstAttribute="centerY" secondItem="IM7-px-KnV" secondAttribute="centerY" id="HJC-Ea-15d"/>
+                                        <constraint firstItem="Rv6-5F-dtD" firstAttribute="leading" secondItem="IM7-px-KnV" secondAttribute="leadingMargin" constant="8" id="XVK-NK-Nzd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="configurationNameLbl" destination="pie-Us-efG" id="Fgi-ok-wIe"/>
+                                    <outlet property="flapSettingLbl" destination="8aN-dG-1fX" id="HL6-qd-5gR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

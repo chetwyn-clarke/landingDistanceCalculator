@@ -1,5 +1,5 @@
 //
-//  AircraftLIstCell.swift
+//  AircraftListCell.swift
 //  Landing Distance Calculator
 //
 //  Created by Chetwyn on 4/3/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AircraftLIstCell: UITableViewCell {
+class AircraftListCell: UITableViewCell {
     
     @IBOutlet weak var aircraftLbl: UILabel!
     @IBOutlet weak var engineLbl: UILabel!
